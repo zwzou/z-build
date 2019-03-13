@@ -1,5 +1,5 @@
 # z-build
-一个方面的脚手架
+一个方便的脚手架
 
 // 安装
 npm install -g z-build
