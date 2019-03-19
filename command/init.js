@@ -10,9 +10,11 @@ module.exports = (path) => {
 	co(function *() {
 		// 处理用户输入
 		let tplName = path ? path : yield prompt('Template name: ')
-		let projectName = yield prompt('Project name: ')
+		let projectName = yield prompt('Project name: ') 
 		let gitUrl
 		let branch
+
+		projectName = projectName ? projectName : tplName
 
 		if (!config.tpl[tplName]) {
 			console.log(chalk.red('\n × Template does not exit!'))
