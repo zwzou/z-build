@@ -39,11 +39,11 @@ program
 	})
 
 program
-	.command('init')
+	.command('init [paths...]')
 	.description('Gennerate a new template')
 	.alias('i')
-	.action(() => {
-		require('../command/init')()
+	.action((paths) => {
+		require('../command/init')(paths[0])
 	})
 
 program.parse(process.argv)

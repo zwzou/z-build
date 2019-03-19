@@ -6,10 +6,10 @@ const chalk = require('chalk')
 const download = require('download-git-repo') 
 const ora = require('ora')
 
-module.exports = () => {
+module.exports = (path) => {
 	co(function *() {
 		// 处理用户输入
-		let tplName = yield prompt('Template name: ')
+		let tplName = path ? path : yield prompt('Template name: ')
 		let projectName = yield prompt('Project name: ')
 		let gitUrl
 		let branch
